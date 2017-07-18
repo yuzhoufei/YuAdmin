@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>YuAdmin</title>
+		<!-- global begin -->
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- PNG图片IE6下兼容性处理方案 -->
+		<!--[if IE 6]>
+		<script type="text/javascript" src="yu-js/DD_belatedPNG_0.0.8a.js"></script>
+		<script>DD_belatedPNG.fix('.pngimg,.pngimg:hover');</script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="yu-css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="yu-css/function.css" />
+		<link rel="stylesheet" type="text/css" href="yu-css/default_common.css" />
+		<!-- global end -->
+		<!-- CSS private begin -->
+		<style type="text/css">
+			
+		</style>
+		<!-- CSS private end -->
+	</head>
+	<body>
+		<!-- shortcut begin -->
+		<div class="shortcut f-clear">
+			<span class="f-fl">YuAdmin（Web前端框架ForPC）欢迎您！&nbsp;&nbsp;</span>
+			<span class="f-fl">地区：</span>
+			<b class="f-fl">华东</b>
+			<a class="f-fl my-project" href="javascript:;">切换</a>
+			<a class="f-fr" id="esc" href="javascript:;">安全退出</a>
+			<span class="f-fr">UseName</span>
+		</div>
+		<!-- shortcut end -->
+		<div class="container">
+			<!-- menu begin -->
+			<div class="menu">
+				<dl></dl>
+			</div>
+			<!-- menu end -->
+			<div class="main">
+				<!-- title begin -->
+				<h1 class="page-name">LIST</h1>
+				<!-- title end -->
+				<!-- crumb begin -->
+				<div class="crumb f-oh">
+					<ul class="f-clear">
+						<li class="f-fl"><i>-</i><a href="index.html">HOME</a></li>
+						<li class="f-fl"><i>-</i><a class="f-csd" href="javascript:;">DEMO</a></li>
+						<li class="f-fl"><i>-</i><a href="list.html">LIST</a></li>
+					</ul>
+				</div>
+				<!-- crumb end -->
+				<!-- search begin -->
+				<form id="search-form">
+					<table width="100%" class="search">
+						<tbody>
+							<tr>
+								<td class="name"><strong class="f-ib">*</strong>文本域：</td>
+								<td class="inp"><input name="t1" class="duf-text {required:true,rangelength:[2,10]}" type="text" autocomplete="off"><br></td>
+								<td class="name"><strong class="f-ib">*</strong>文本域：</td>
+								<td class="inp"><input name="t2" class="duf-text {required:true,rangelength:[2,10]}" type="text" autocomplete="off"><br></td>
+								<td class="name"><strong class="f-ib">*</strong>文本域：</td>
+								<td class="inp"><input name="t3" class="duf-text {required:true,rangelength:[2,10]}" type="text" autocomplete="off"><br></td>
+							</tr>
+							<tr>
+								<td class="name"><strong class="f-ib">*</strong>文本域：</td>
+								<td class="inp"><input name="t4" class="duf-text {required:true,rangelength:[2,10]}" type="text" autocomplete="off"><br></td>
+								<td class="name"><strong class="f-ib">*</strong>文本域：</td>
+								<td class="inp"><input name="t5" class="duf-text {required:true,rangelength:[2,10]}" type="text" autocomplete="off"><br></td>
+								<td class="name"><strong class="f-ib">*</strong>文本域：</td>
+								<td class="inp"><input name="t6" class="duf-text {required:true,rangelength:[2,10]}" type="text" autocomplete="off"><br></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+				<div class="btn-box">
+					<a class="btn f-ib btn-bg-bor-1" id="sf-btn" href="javascript:;">查询</a>
+					<a class="btn f-ib btn-bg-bor-2" href="javascript:;">新增</a>
+				</div>
+				<!-- search end -->
+				<!-- table begin -->
+				<br>
+				<p class="tab-tit1">表格名称</p>
+				<div class="tab-overflow">
+					<table class="table-s1 tab1" width="100%">
+						<thead>
+							<tr>
+								<th class="ck th-ck"><input class="ick" type="checkbox"></th>
+								<th class="order">表头</th>
+								<th class="sortasc">表头</th>
+								<th class="sortdesc">表头</th>
+								<th width="150">操作</th>
+								<th style="text-align:center;">更多</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="tr-items">
+								<td class="ck"><input type="checkbox"></td>
+								<td>数据</td>
+								<td>数据</td>
+								<td>数据</td>
+								<td><a class="do-btn" href="details.html">查看</a><a class="do-btn edit" href="javascript:;">编辑</a><a class="do-btn line" href="javascript:;">换行</a><a class="do-btn" href="javascript:;">删除</a></td>
+								<td class="more"><a class="details" href="javascript:;">展开</a></td>
+							</tr>
+							<tr class="tr-details">
+								<td style="line-height:30px;">更多内容<br>更多内容<br>更多内容</td>
+							</tr>
+							<tr class="tr-items">
+								<td class="ck"><input type="checkbox"></td>
+								<td>数据</td>
+								<td>数据</td>
+								<td>数据</td>
+								<td><a class="do-btn" href="details.html">查看</a><a class="do-btn edit" href="javascript:;">编辑</a><a class="do-btn line" href="javascript:;">换行</a><a class="do-btn" href="javascript:;">删除</a></td>
+								<td class="more"><a class="details" href="javascript:;">展开</a></td>
+							</tr>
+							<tr class="tr-details">
+								<td style="line-height:30px;">更多内容<br>更多内容<br>更多内容</td>
+							</tr>
+							<tr class="tr-items">
+								<td class="ck"><input type="checkbox"></td>
+								<td>数据</td>
+								<td>数据</td>
+								<td>数据</td>
+								<td><a class="do-btn" href="details.html">查看</a><a class="do-btn edit" href="javascript:;">编辑</a><a class="do-btn line" href="javascript:;">换行</a><a class="do-btn" href="javascript:;">删除</a></td>
+								<td class="more"><a class="details" href="javascript:;">展开</a></td>
+							</tr>
+							<tr class="tr-details">
+								<td style="line-height:30px;">更多内容<br>更多内容<br>更多内容</td>
+							</tr>
+						</tbody>
+
+						<tfoot>
+							<tr>
+								<td class="ck">
+									<a class="del" href="javascript:;">删除</a>
+								</td>
+								<td class="foot-btn">
+									<a class="upload" href="javascript:;">导入表格</a>
+									<a class="download" href="javascript:;">导出表格</a>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<!-- table end -->
+				<br><br>
+				<!-- page bar begin -->
+				<table class="page_bar">
+					<tbody>
+						<tr>
+							<td><a class="previous none" href="javascript:;">上一页</a></td>
+							<td><a class="number active" href="javascript:;">1</a></td>
+							<td><a class="number" href="javascript:;">2</a></td>
+							<td><a class="number" href="javascript:;">3</a></td>
+							<td><a class="number" href="javascript:;">4</a></td>
+							<td><a class="number" href="javascript:;">5</a></td>
+							<td><a class="number" href="javascript:;">6</a></td>
+							<td><a class="number" href="javascript:;">7</a></td>
+							<td><a class="last" href="javascript:;">下一页</a></td>
+							<td><i class="allPages">共7页，到第</i></td>
+							<td><input class="pageVal" type="text" maxlength="4"></td>
+							<td><i>页</i></td>
+							<td><a class="yes" href="javascript:;">确定</a></td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- page bar end -->
+				<!-- alerts begin -->
+				<!--<div class="alert"><strong>暂时没有数据，请重新查询。</strong></div>-->
+				<!-- alerts end -->
+			</div>
+		</div>
+		<!-- form layer begin -->
+			<div id="form-layer-1" class="form-layer" style="width: 400px; margin-left: -200px;">
+				<p class="f-clear">
+					<span class="f-fl">表单名称</span>
+					<a class="close f-fr" href="javascript:;"></a>
+				</p>
+				<div class="mh">
+				<form id="layer-form">
+					<table width="100%">
+						<tbody>
+							<tr>
+								<td width="5%" style="text-align:center;" class="name"></td>
+								<td width="50%" class="inp"><input id="mySel4" name="l1" class="f-csp duf-text" readonly="readonly" type="text"><br></td>
+								<td width="30%" class="inp"><a class="paixu-btn paixu-btn-active" href="javascript:;">升序</a><a class="paixu-btn" href="javascript:;">降序</a></td>
+								<td width="15%" style="text-align:center;"><a style="color:#005982;" href="javascript:;">删除</a></td>
+							</tr>
+							<tr>
+								<td width="100%" style="text-align:center;" class="name" colspan="4"><br><br><br><br><br><br><br><br><br><br><br></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+				<div class="btn-box">
+					<a class="btn f-ib btn-bg-bor-1" href="javascript:;">查询</a>
+					<a class="btn f-ib btn-bg-bor-2" href="javascript:;">新增</a>
+				</div>
+				</div>
+			</div>
+		<!--新增form 1 start 弹出一行三列组合弹窗-->
+		<div id="commodityDiv" class="form-layer" style="width: 900px;margin-left: -450px;z-index: 99999;" >
+			<p class="f-clear">
+				<span class="f-fl">编辑</span>
+				<a class="close f-fr" href="javascript:;"></a>
+			</p>
+			<div class="mh">
+				<form id="commodityForm" novalidate="novalidate">
+					<table width="100%">
+						<tbody>
+							<tr>
+								<td width="9%" class="name"><strong class="f-ib">*</strong>文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input name="inp1" class="duf-text f-fl valid {required:true}" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name"><strong class="f-ib">*</strong>文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input name="inp2" class="duf-text f-fl valid {required:true}" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name"><strong class="f-ib">*</strong>文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input name="inp3" class="duf-text f-fl valid {required:true}" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+							<tr>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+								<td width="9%" class="name">文本域:&nbsp;</td>
+								<td width="24%" class="inp">
+									<input class="duf-text f-fl valid" type="text" maxlength="128">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+				<div class="error-box commodityForm-error"></div>
+				<div class="btn-box">
+					<a class="btn f-ib btn-bg-bor-1" id="lf-btn" href="javascript:;">保存</a>
+					<a class="btn f-ib btn-bg-bor-3 file-btn" href="javascript:;">上传</a>
+					<input class="f-dn file-input" type="file" />
+				</div>
+			</div>
+		</div>
+		<!--新增表单1 ending-->
+		<!-- form layer end -->
+		
+		<!-- footer begin -->
+		<!-- project select begin -->
+		<div class="project-select">
+			<p class="f-clear">
+				<span class="f-fl">请选择</span>
+				<a class="close f-fr" href="javascript:;"></a>
+			</p>
+			<ul class="f-clear">
+				<li class="f-fl"><a class="f-toe" href="javascript:;">华南</a></li>
+				<li class="f-fl"><a class="f-toe" href="javascript:;">华西</a></li>
+				<li class="f-fl"><a class="f-toe" href="javascript:;">华北</a></li>
+				<li class="f-fl"><a class="f-toe" href="javascript:;">华中</a></li>
+			</ul>
+		</div>
+		<!-- project select end -->
+		<div class="backtop"><a href="javascript:;" title="返回顶部"></a></div>
+		<!-- global begin -->
+		<script type="text/javascript" src="yu-js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="yu-js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="yu-js/common.js"></script>
+		<script type="text/javascript" src="yu-js/validation/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="yu-js/validation/messages_cn.js"></script>
+		<script type="text/javascript" src="yu-js/validation/jquery.metadata.js"></script>
+		<script type="text/javascript" src="yu-js/My97DatePicker/WdatePicker.js"></script>
+		<script type="text/javascript">
+			//注销
+			$('#esc').click(function() {
+				$('body').Layer({
+					layerText: '如需退出请点击确认！',
+					escBtn: '',
+					enterBtnFn: function() {
+						$('.layer_footer .enter').click(function() {
+							$('.layer_bg').remove();
+							$('.layer_box').remove();
+						});
+					}
+				});
+			});
+			//切换
+			$('.shortcut .my-project').click(function() {
+				$('body').prepend('<div class="layer_bg"></div>');
+				$('.project-select').show();
+				$('.layer_bg').css('height', $.common.bodyHeight());
+				$('.project-select').css('margin-top', -parseInt($('.project-select').height() / 2));
+				$(window).resize(function() {
+					$('.layer_bg').css('height', $.common.bodyHeight());
+				});
+				var del = function() {
+					$('.layer_bg').remove();
+					$('.project-select').hide();
+				};
+				$('.project-select p a.close').click(function() {
+					del();
+				});
+			});
+		</script>
+		<!-- global end -->
+		<!-- footer end -->
+		
+		<!-- JS private begin -->
+		<script type="text/javascript">
+		var list = {
+			
+		};
+		
+		(function($){
+			
+		})(jQuery);
+		
+		jQuery(function(){
+			$.common.menuList('menu.json','11');
+		    //弹窗（表单） 
+		    $('.edit').click(function(){
+		    	$.common.formLayer('#commodityDiv');
+		    });
+		    
+		    $.validator.setDefaults({
+			   debug: true
+			});
+			$("#search-form").validate({
+		        errorPlacement:function(error,element) {  
+		    		error.appendTo(element.parent());
+		        },
+		        submitHandler:function(form) {
+		        	$('body').Layer({layerText:'提交成功，谢谢！'});
+				}
+			});
+			$('#sf-btn').click(function(){
+				setTimeout(function(){
+					$('#search-form').submit();
+				},0);
+			});
+			$("#commodityForm").validate({
+				errorLabelContainer: $("div.commodityForm-error"),
+		        errorPlacement:function(error,element) {  
+		    		error.appendTo(element.parent());
+		        },
+		        submitHandler:function(form) {
+		        	$('#commodityDiv p a.close').trigger('click');
+		        	$('body').Layer({layerText:'提交成功，谢谢！'});
+				}
+			});
+			$('#lf-btn').click(function(){
+				setTimeout(function(){
+					$('#commodityForm').submit();
+				},0);
+			});
+			
+			//表格全选
+		    $('.table-s1 .th-ck .ick').click(function(){
+		        var allCk = $(this).parent().parent().parent().siblings('tbody').find('tr.tr-items td.ck input');
+		        if($(this).prop("checked")==false){
+		            allCk.prop("checked",!!$(this).prop("checked"));
+		        } else if($(this).prop("checked")==true){
+		            allCk.prop("checked",$(this).prop("checked"));
+		        };
+		    });
+		    //表格展开
+		    $('.table-s1 tbody tr.tr-items').each(function(index,element){
+		        $(element).find('td.more a.details').click(function(){
+		            if($(this).parent().parent().next().css('display')=='none'){
+		                $(this).parent().parent().next().show();
+		                $(this).html('收起');
+		            } else {
+		                $(this).parent().parent().next().hide();
+		                $(this).html('展开');
+		            };
+		        });
+		    });
+		    //表格隔行变色
+		    $('table.tab1 tbody tr.tr-items:even').addClass('t-odd');
+		    //表格换行
+		    $('table.tab1 tbody tr.tr-items').newLine();
+		    //表格合并列数
+		    $('table.tab1').TdColspan();
+		});
+		</script>
+		<!-- JS private end -->
+	</body>
+</html>

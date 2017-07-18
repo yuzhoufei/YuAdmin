@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>YuAdmin</title>
+		<!-- global begin -->
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- PNG图片IE6下兼容性处理方案 -->
+		<!--[if IE 6]>
+		<script type="text/javascript" src="yu-js/DD_belatedPNG_0.0.8a.js"></script>
+		<script>DD_belatedPNG.fix('.pngimg,.pngimg:hover');</script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="yu-css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="yu-css/function.css" />
+		<link rel="stylesheet" type="text/css" href="yu-css/default_common.css" />
+		<!-- global end -->
+		<!-- CSS private begin -->
+		<style type="text/css">
+		/* slide begin */
+		.slide { width: 520px; height: 280px; overflow: hidden; position: relative; margin: 0 auto; z-index: 1; }
+		.slide ul.slider_img { position: absolute; left: 0; width: 520px; }
+		.slide ul.slider_img li { float: left; width: 520px; }
+		.slide ul.slider_trigger { position: absolute; bottom: 5%; left: 50%; padding: 2px 0; border-radius: 10px; background: rgba(255,255,255,.3); display: none; }
+		.slide ul.slider_trigger li { float: left; border-radius: 50%; background: #b7b7b7; width: 10px; height: 0; padding-top: 10px; font-size: 0; margin: 0 2px; overflow: hidden; cursor: pointer; }
+		.slide ul.slider_trigger li.active { background: #f40; }
+		.slide .slider_prev,
+		.slide .slider_next { width: 15px; height: 23px; padding: 8px 12px 9px 13px; display: block; position: absolute; top: 50%; margin-top: -20px; display: none; }
+		.slide .slider_prev_mouseenter,
+		.slide .slider_next_mouseenter { background-color: #000; filter: alpha(opacity=30); -moz-opacity: 0.3; -khtml-opacity: 0.3; opacity: 0.3; display: block; }
+		.slide .slider_prev_mouseenter:hover,
+		.slide .slider_next_mouseenter:hover { background-color: #000; filter: alpha(opacity=70); -moz-opacity: 0.7; -khtml-opacity: 0.7; opacity: 0.7; }
+		.slide .slider_prev { left: 5px; }
+		.slide .slider_next { right: 5px; }
+		.slide .slider_prev i,
+		.slide .slider_next i { width: 15px; height: 23px; display: block; }
+		.slide .slider_prev i { background: url(yu-img/slider/slider_icon.gif) no-repeat center -23px; }
+		.slide .slider_next i { background: url(yu-img/slider/slider_icon.gif) no-repeat center 0; }
+		/* slide end */
+		</style>
+		<!-- CSS private end -->
+	</head>
+	<body>
+		<!-- shortcut begin -->
+		<div class="shortcut f-clear">
+			<span class="f-fl">YuAdmin（Web前端框架ForPC）欢迎您！&nbsp;&nbsp;</span>
+			<span class="f-fl">地区：</span>
+			<b class="f-fl">华东</b>
+			<a class="f-fl my-project" href="javascript:;">切换</a>
+			<a class="f-fr" id="esc" href="javascript:;">安全退出</a>
+			<span class="f-fr">UseName</span>
+		</div>
+		<!-- shortcut end -->
+		<div class="container">
+			<!-- menu begin -->
+			<div class="menu">
+				<dl></dl>
+			</div>
+			<!-- menu end -->
+			<div class="main">
+				<!-- title begin -->
+				<h1 class="page-name">幻灯片（仿淘宝）</h1>
+				<!-- title end -->
+				<br />
+				<div class="slide">
+					<ul class="slider_img f-clear">
+						<li><a href="javascript:;"><img src="yu-img/slider/slider_1.jpg" title="1" alt="1" /></a></li>
+						<li><a href="javascript:;"><img src="yu-img/slider/slider_2.jpg" title="2" alt="2" /></a></li>
+						<li><a href="javascript:;"><img src="yu-img/slider/slider_3.jpg" title="3" alt="3" /></a></li>
+						<li><a href="javascript:;"><img src="yu-img/slider/slider_4.jpg" title="4" alt="4" /></a></li>
+						<li><a href="javascript:;"><img src="yu-img/slider/slider_5.jpg" title="5" alt="5" /></a></li>
+					</ul>
+					<ul class="slider_trigger f-clear">
+					</ul>
+					<a href="javascript:;" class="slider_prev"><i></i></a>
+					<a href="javascript:;" class="slider_next"><i></i></a>
+				</div>
+			</div>
+		</div>
+		<!-- footer begin -->
+		<!-- project select begin -->
+		<div class="project-select">
+			<p class="f-clear">
+				<span class="f-fl">请选择</span>
+				<a class="close f-fr" href="javascript:;"></a>
+			</p>
+			<ul class="f-clear">
+				<li class="f-fl"><a class="f-toe" href="javascript:;">华南</a></li>
+				<li class="f-fl"><a class="f-toe" href="javascript:;">华西</a></li>
+				<li class="f-fl"><a class="f-toe" href="javascript:;">华北</a></li>
+				<li class="f-fl"><a class="f-toe" href="javascript:;">华中</a></li>
+			</ul>
+		</div>
+		<!-- project select end -->
+		<div class="backtop"><a href="javascript:;" title="返回顶部"></a></div>
+		<!-- global begin -->
+		<script type="text/javascript" src="yu-js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="yu-js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="yu-js/common.js"></script>
+		<script type="text/javascript" src="yu-js/validation/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="yu-js/validation/messages_cn.js"></script>
+		<script type="text/javascript" src="yu-js/validation/jquery.metadata.js"></script>
+		<script type="text/javascript" src="yu-js/My97DatePicker/WdatePicker.js"></script>
+		<script type="text/javascript">
+			//注销
+			$('#esc').click(function() {
+				$('body').Layer({
+					layerText: '如需退出请点击确认！',
+					escBtn: '',
+					enterBtnFn: function() {
+						$('.layer_footer .enter').click(function() {
+							$('.layer_bg').remove();
+							$('.layer_box').remove();
+						});
+					}
+				});
+			});
+			//切换
+			$('.shortcut .my-project').click(function() {
+				$('body').prepend('<div class="layer_bg"></div>');
+				$('.project-select').show();
+				$('.layer_bg').css('height', $.common.bodyHeight());
+				$('.project-select').css('margin-top', -parseInt($('.project-select').height() / 2));
+				$(window).resize(function() {
+					$('.layer_bg').css('height', $.common.bodyHeight());
+				});
+				var del = function() {
+					$('.layer_bg').remove();
+					$('.project-select').hide();
+				};
+				$('.project-select p a.close').click(function() {
+					del();
+				});
+			});
+		</script>
+		<!-- global end -->
+		<!-- footer end -->
+		
+		<!-- JS private begin -->
+		<script type="text/javascript">
+		jQuery(function(){
+			$.common.menuList('menu.json','15');
+			slide = function(){
+				var timer = null;
+				var oImgLiWidth = $('.slide .slider_img li:first').width();
+				var interval = 3000;
+				var bBtn = true;
+				/*生成触发器*/
+				for(var i=0;i<=$('.slide .slider_img li').length-1;i++){
+					$('.slide .slider_trigger').append('<li>'+i+'</li>');
+				};
+				/*设置触发器样式*/
+				var aTriggerWidth = -($('.slide .slider_trigger').width()/2)+'px';
+				$('.slide .slider_trigger').css('margin-left',aTriggerWidth);
+				$('.slide .slider_trigger li:first').addClass('active');
+				$('.slide .slider_trigger').show();
+				/*复制幻灯片*/
+				$('.slide .slider_img').html($('.slide .slider_img').html()+$('.slide .slider_img').html());
+				/*计算并设置幻灯片宽度*/
+				var aImgWidth = $('.slide .slider_img li').length*oImgLiWidth+'px';
+				$('.slide .slider_img').css('width',aImgWidth);
+				/*控制按钮*/
+				$('.slide').mouseenter(function(){
+					$('.slider_prev').addClass('slider_prev_mouseenter');
+					$('.slider_next').addClass('slider_next_mouseenter');
+					clearInterval(timer);
+					$('.slider_prev').click(function(){
+						if(bBtn){
+							bBtn = false;
+							playBack();
+						};
+					});
+					$('.slider_next').click(function(){
+						if(bBtn){
+							bBtn = false;
+							play();
+						};
+					});
+					$('.slide .slider_trigger li').click(function(){
+						if(bBtn){
+							bBtn = false;
+							var imgLeft = -oImgLiWidth*$(this).index()+'px';
+							$('.slide .slider_trigger li').removeClass('active');
+							$(this).addClass('active');
+							$('.slide .slider_img').animate({left:imgLeft},function(){bBtn=true;});
+						};
+					});
+				});
+				$('.slide').mouseleave(function(){
+					$('.slider_prev').removeClass('slider_prev_mouseenter');
+					$('.slider_next').removeClass('slider_next_mouseenter');
+					timer=setInterval(function(){
+						play();
+					},interval);
+				});
+				/*播放*/
+				function play(){
+					if($('.slide .slider_img').position().left <= -($('.slide .slider_img').width()/2)){
+						$('.slide .slider_img').css('left',0);
+					};
+					var iTriggerIndex = parseInt($('.slide .slider_trigger li.active').html())+1;
+					if(iTriggerIndex>$('.slide .slider_trigger li').length-1){
+						iTriggerIndex=0;
+					};
+					var ulLeft=$('.slide .slider_img').position().left-oImgLiWidth+'px';
+					$('.slide .slider_img').animate({left:ulLeft},function(){bBtn=true;});
+					$('.slide .slider_trigger li').removeClass('active');
+					$('.slide .slider_trigger li').eq(iTriggerIndex).addClass('active');
+				};
+				/*回放*/
+				function playBack(){
+					if($('.slide .slider_img').position().left == 0){
+						$('.slide .slider_img').css('left',-($('.slide .slider_img').width()/2)+'px');
+					};
+					var iTriggerIndex = parseInt($('.slide .slider_trigger li.active').html())-1;
+					if(iTriggerIndex<0){
+						iTriggerIndex=$('.slide .slider_trigger li').length-1;
+					};
+					var ulLeft=$('.slide .slider_img').position().left+oImgLiWidth+'px';
+					$('.slide .slider_img').animate({left:ulLeft},function(){bBtn=true;});
+					$('.slide .slider_trigger li').removeClass('active');
+					$('.slide .slider_trigger li').eq(iTriggerIndex).addClass('active');
+				};
+				timer=setInterval(function(){
+					play();
+				},interval);
+			};
+			slide();
+		});
+		</script>
+		<!-- JS private end -->
+	</body>
+</html>

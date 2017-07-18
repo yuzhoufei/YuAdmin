@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>YuAdmin</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--[if IE 6]>
+    <script type="text/javascript" src="yu-js/DD_belatedPNG_0.0.8a.js"></script>
+    <script>DD_belatedPNG.fix('.pngimg,.pngimg:hover');</script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="yu-css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="yu-css/function.css" />
+    <link rel="stylesheet" type="text/css" href="yu-css/default_common.css" />
+  </head>
+  <body>
+    <!-- shortcut begin -->
+    <div class="shortcut f-clear">
+      <span class="f-fl">YuAdmin（Web前端框架ForPC）欢迎您！  </span>
+      <span class="f-fl">地区：</span>
+      <b class="f-fl">华东</b>
+      <a class="f-fl my-project" href="javascript:;">切换</a>
+      <a class="f-fr" id="esc" href="javascript:;">安全退出</a>
+      <span class="f-fr">UseName</span>
+    </div>
+    <!-- shortcut end -->
+    <div class="container">
+      <!-- menu begin -->
+      <div class="menu">
+        <dl></dl>
+      </div>
+      <!-- menu end -->
+      <div class="main">
+        <!-- title begin -->
+        <h1 class="page-name">HOME</h1>
+        <!-- title end -->
+      </div>
+      <!-- footer begin -->
+      <!-- select begin -->
+      <div class="project-select">
+        <p class="f-clear">
+          <span class="f-fl">请选择</span>
+          <a class="close f-fr" href="javascript:;"></a>
+        </p>
+        <ul class="f-clear">
+          <li class="f-fl">
+            <a class="f-toe" href="javascript:;">华南</a>
+          </li>
+          <li class="f-fl">
+            <a class="f-toe" href="javascript:;">华西</a>
+          </li>
+          <li class="f-fl">
+            <a class="f-toe" href="javascript:;">华北</a>
+          </li>
+          <li class="f-fl">
+            <a class="f-toe" href="javascript:;">华中</a>
+          </li>
+        </ul>
+      </div>
+      <!-- select end -->
+      <div class="backtop">
+        <a href="javascript:;" title="返回顶部"></a>
+      </div>
+      <!-- global begin -->
+      <script type="text/javascript" src="yu-js/jquery-1.11.1.min.js"></script>
+      <script type="text/javascript" src="yu-js/jquery.cookie.js"></script>
+      <script type="text/javascript" src="yu-js/common.js"></script>
+      <script type="text/javascript" src="yu-js/validation/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="yu-js/validation/messages_cn.js"></script>
+      <script type="text/javascript" src="yu-js/validation/jquery.metadata.js"></script>
+      <script type="text/javascript" src="yu-js/My97DatePicker/WdatePicker.js"></script>
+      <script type="text/javascript">
+      	jQuery(function() {
+	        //注销
+	        $('#esc').click(function() {
+	          $('body').Layer({
+	            layerText: '如需退出请点击确认！',
+	            escBtn: '',
+	            enterBtnFn: function() {
+	              $('.layer_footer .enter').click(function() {
+	                $('.layer_bg').remove();
+	                $('.layer_box').remove();
+	              });
+	            }
+	          });
+	        });
+	        //切换
+	        $('.shortcut .my-project').click(function() {
+	          $('body').prepend('<div class="layer_bg"></div>');
+	          $('.project-select').show();
+	          $('.layer_bg').css('height', $.common.bodyHeight());
+	          $('.project-select').css('margin-top', -parseInt($('.project-select').height() / 2));
+	          $(window).resize(function() {
+	            $('.layer_bg').css('height', $.common.bodyHeight());
+	          });
+	          var del = function() {
+	            $('.layer_bg').remove();
+	            $('.project-select').hide();
+	          };
+	          $('.project-select p a.close').click(function() {
+	            del();
+	          });
+	        });
+        });
+      </script>
+      <!-- global end -->
+      <!-- footer end -->
+      <!-- JS private begin -->
+      <script type="text/javascript">
+        jQuery(function() {
+					$.common.menuList('menu.json','0');
+        });
+      </script>
+      <!-- JS private end -->
+  </body>
+</html>
